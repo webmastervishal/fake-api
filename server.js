@@ -2,10 +2,11 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const jsonServer = require("json-server");
 const jwt = require("jsonwebtoken");
-
 const server = jsonServer.create();
 const router = jsonServer.router("./db/database.json");
 const userdb = JSON.parse(fs.readFileSync("./db/users.json", "UTF-8"));
+
+const PORT = process.env.PORT || 8000;
 
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
@@ -132,7 +133,7 @@ server.use(/^(?!\/auth).*$/, (req, res, next) => {
 
 server.use(router);
 
-server.listen(8000, () => {
+server.listen(PORT, () => {
   console.log("Run Auth API Server");
 });
 /*
