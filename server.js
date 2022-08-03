@@ -134,7 +134,7 @@ server.use(/^(?!\/auth).*$/, (req, res, next) => {
 server.use(router);
 
 server.listen(PORT, () => {
-  console.log("Run Auth API Server");
+  console.log("API server running...");
 });
 /*
 refer this : https://www.techiediaries.com/fake-api-jwt-json-server/
