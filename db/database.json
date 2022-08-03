@@ -1,0 +1,19 @@
+{
+  "currencies": [
+    {
+      "name": "Dollar",
+      "symbol": "$",
+      "rate": "0.05"
+    },
+    {
+      "name": "Euro",
+      "symbol": "€",
+      "rate": "0.01"
+    },
+    {
+      "name": "Pound",
+      "symbol": "£",
+      "rate": "0.007"
+    }
+  ]
+}
